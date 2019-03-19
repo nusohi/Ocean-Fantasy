@@ -1,16 +1,75 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerMove : MonoBehaviour {
+    
+    public float NormalStep = 0.05f;    // 每关键帧 正常可移动步长
+    public float DashStep = 0.10f;      // 每关键帧 加速时可移动步长
 
-	// Use this for initialization
+    public float ReduceSpeed = 0.25f;      // 加速时蓄力值减少速度
+    public float RecoverSpeed = 0.4f;     // 蓄力值恢复的速度
+
+    public Slider PowerSlider;
+
+
+    private float _ReduceSpeed_PerFrame_;
+    private float _RecoverSpeed_PerFrame_;
+    private float _Step_;
+
+    private bool Dashing = false; 
+    private float Power = 1f;   // 蓄力值，范围0-1
+
+    private Rigidbody2D rigidbody;
+
+
+
 	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+        rigidbody = GetComponent<Rigidbody2D>();
+        _ReduceSpeed_PerFrame_ = ReduceSpeed * Time.deltaTime;
+        _RecoverSpeed_PerFrame_ = RecoverSpeed * Time.deltaTime;
+        _Step_ = NormalStep;
+    }
+
+    void Update() {
+        // 加速
+        if (Input.GetKey(KeyCode.Space) && Power > 0f) {
+            Dashing = true;
+            _Step_ = DashStep;
+        }
+        else {
+            Dashing = false;
+            _Step_ = NormalStep;
+        }
+
+        // 蓄力值减少
+        if (Dashing) {
+            Power -= _ReduceSpeed_PerFrame_;
+        }
+
+        // 蓄力值恢复
+        if (!Dashing && Power < 1f && !Input.GetKey(KeyCode.Space)) {
+            Power += _RecoverSpeed_PerFrame_;
+        }
+        else if (Power > 1f) {
+            Power = 1f;
+        }
+
+        // 显示蓄力值
+        if (PowerSlider != null) {
+            PowerSlider.value = Power;
+        }
+
+    }
+
+    void FixedUpdate () {
+        // 基本移动 WASD
+        float h = Input.GetAxis("Horizontal");
+        float v = Input.GetAxis("Vertical");
+
+        if (Mathf.Abs(h) > 0.0001 || Mathf.Abs(v) > 0.0001) {
+            rigidbody.transform.position += new Vector3(h * _Step_, v * _Step_, 0);
+        }
+    }
 }
