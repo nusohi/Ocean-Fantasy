@@ -49,6 +49,7 @@ public class GameManager : MonoBehaviour {
         GameObject temp=t;
         temp.SetActive(false);
         Time.timeScale = 1;
+        SceneManager.LoadScene(1);
     }
 
     //增加积分 每捡取一次垃圾就调用一次
@@ -93,7 +94,7 @@ public class GameManager : MonoBehaviour {
    public void Win()
     {
         //若不是最后一关则跳转至下一关
-        if (CurrentLevel != MaxLevelNum-1)
+        if (CurrentLevel != MaxLevelNum)
             SceneManager.LoadScene(++CurrentLevel);
         //是最后一关则游戏结束
         else
@@ -105,7 +106,7 @@ public class GameManager : MonoBehaviour {
     //难度控制
     void DifficultyControl(int num,int speed)
     {
-        GameObject.Find("RubbishManager").SendMessage("Initialize")
+        GameObject.Find("RubbishManager").SendMessage("Initialize");
         //Initialize(num,speed)
     }
 
