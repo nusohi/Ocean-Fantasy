@@ -26,7 +26,7 @@ public class Player : MonoBehaviour
     {
         if (collision.gameObject.tag == "Rubbish")
         {  Debug.Log("sdasda");
-            GameManager.Instance.AddScore();
+           // GameManager.Instance.AddScore();
             Destroy(collision.gameObject);
         }
         else
