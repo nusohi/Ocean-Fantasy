@@ -21,11 +21,13 @@ public class Player : MonoBehaviour
 	    Life += Oxygen;
 	}
 
-    private void OnCollisionEnter(Collision collision)
+
+    void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Rubbish")
-        {
-            GameObject.Find("GameManager").SendMessage("AddScore");
+        {  Debug.Log("sdasda");
+            GameManager.Instance.AddScore();
+            Destroy(collision.gameObject);
         }
         else
         {

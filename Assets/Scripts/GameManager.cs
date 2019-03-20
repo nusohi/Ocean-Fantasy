@@ -29,7 +29,8 @@ public class GameManager : MonoBehaviour {
 	// Use this for initialization
 	void Awake () {
         //实例
-        _Instance = this;
+	    if (_Instance == null)
+	        _Instance = this;
         //获取当前场景编号
         CurrentLevel = SceneManager.GetActiveScene().buildIndex;
         Time.timeScale = 0;

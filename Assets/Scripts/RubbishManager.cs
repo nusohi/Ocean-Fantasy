@@ -28,8 +28,9 @@ public class RubbishManager : MonoBehaviour
     void Update()
     {
         if(Num>=0)
-        { CountDown -= Time.deltaTime;
-        if (CountDown <=0)
+        {
+            CountDown -= Time.deltaTime;
+            if (CountDown <=0)
         {
             CreateRubbish();
             Num--;
@@ -49,14 +50,14 @@ public class RubbishManager : MonoBehaviour
         if (indexX >= 0)
         {
             GameObject go = GameObject.Instantiate(RubbishArray[index], new Vector3(Right, indexY, 0), Quaternion.identity) as GameObject;
-          Rigidbody rigidbody = go.GetComponent<Rigidbody>();
+          Rigidbody2D rigidbody = go.GetComponent<Rigidbody2D>();
         rigidbody.velocity=new Vector3(-10,0,0);
         Destroy(go.gameObject,8f);
         }
         else
         {
-            GameObject go = GameObject.Instantiate(RubbishArray[index], new Vector3(Left, indexY, 0), Quaternion.identity) as GameObject;
-            Rigidbody rigidbody = go.GetComponent<Rigidbody>();
+            GameObject go = GameObject.Instantiate(RubbishArray[index], new Vector3(Left, indexY, -2), Quaternion.identity) as GameObject;
+            Rigidbody2D rigidbody = go.GetComponent<Rigidbody2D>();
             rigidbody.velocity = new Vector3(10, 0, 0);
             Destroy(go.gameObject, 8f);
         }
