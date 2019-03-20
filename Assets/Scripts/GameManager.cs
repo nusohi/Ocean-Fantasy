@@ -105,7 +105,7 @@ public class GameManager : MonoBehaviour {
     //难度控制
     void DifficultyControl(int num,int speed)
     {
-        GameObject.Find("RubbishManager").SendMessage("Initialize")
+        GameObject.Find("RubbishManager").SendMessage("Initialize");
         //Initialize(num,speed)
     }
 
