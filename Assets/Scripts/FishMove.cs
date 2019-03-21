@@ -9,6 +9,8 @@ public class FishMove : MonoBehaviour
     public float CountDown = 4;
     public float indexY = 0;
     private int Switch = 1;
+
+    private int CanEat = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,7 +26,9 @@ public class FishMove : MonoBehaviour
             if (CountDown <= 0)
             {
                 Move();
+                
                 CountDown = 4;
+               
             }
         }
     }
@@ -37,12 +41,14 @@ public class FishMove : MonoBehaviour
          indexY = Random.Range(0.4f, -5.8f);
         Tweener fish= this.transform.DOMove(new Vector3(indexX, indexY, -2), 4f);
         fish.SetEase(Ease.Linear);
+        fish.OnComplete(Eat);
 
     }
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Rubbish")
+        if (collision.gameObject.tag == "Rubbish"&&CanEat>0)
         {
+            CanEat = 0;
             Switch = -1;
             Debug.Log("dsdas");
             Tweener fish = this.transform.DOMove(new Vector3(21.42f, -0.08f, -2), 10f);
@@ -55,5 +61,10 @@ public class FishMove : MonoBehaviour
     void Destroy()
     {
         Destroy(this.gameObject);
+    }
+
+    void Eat()
+    {
+        CanEat = 1;
     }
 }
