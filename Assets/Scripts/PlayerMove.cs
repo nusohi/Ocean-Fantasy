@@ -63,7 +63,7 @@ public class PlayerMove : MonoBehaviour {
 
     }
 
-    void FixedUpdate () {
+    void FixedUpdate() {
         // 基本移动 WASD
         float h = Input.GetAxis("Horizontal");
         float v = Input.GetAxis("Vertical");
@@ -83,6 +83,10 @@ public class PlayerMove : MonoBehaviour {
         }
         else if (h > 0 && scale.y < 0) {
             scale.y *= -1;
+        }
+        else if (h == 0 && v == 0) {
+            scale.x = Mathf.Abs(scale.x);
+            scale.y = Mathf.Abs(scale.y);
         }
         transform.localScale = scale;
     }
