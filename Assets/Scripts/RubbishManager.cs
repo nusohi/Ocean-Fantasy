@@ -8,8 +8,8 @@ public class RubbishManager : MonoBehaviour
    
     private float Left = -28;
     private float Right = 28;
-    private float high = 3.8f;
-    private float low = -3.8f;
+    private float high = 0.13f;
+    private float low = -5.98f;
     public GameObject[] RubbishArray;
     private List<Vector2> positionList = new List<Vector2>();
     private Transform RubbishHolder;
@@ -49,16 +49,16 @@ public class RubbishManager : MonoBehaviour
         int index = Random.Range(0, RubbishArray.Length);
         if (indexX >= 0)
         {
-            GameObject go = GameObject.Instantiate(RubbishArray[index], new Vector3(Right, indexY, 0), Quaternion.identity) as GameObject;
+            GameObject go = GameObject.Instantiate(RubbishArray[index], new Vector3(Right, indexY, -2), Quaternion.identity) as GameObject;
           Rigidbody2D rigidbody = go.GetComponent<Rigidbody2D>();
-        rigidbody.velocity=new Vector3(-10,0,0);
+        rigidbody.velocity=new Vector3(-5,0,0);
         Destroy(go.gameObject,8f);
         }
         else
         {
             GameObject go = GameObject.Instantiate(RubbishArray[index], new Vector3(Left, indexY, -2), Quaternion.identity) as GameObject;
             Rigidbody2D rigidbody = go.GetComponent<Rigidbody2D>();
-            rigidbody.velocity = new Vector3(10, 0, 0);
+            rigidbody.velocity = new Vector3(5, 0, 0);
             Destroy(go.gameObject, 8f);
         }
          
