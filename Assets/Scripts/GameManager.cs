@@ -16,7 +16,7 @@ public class GameManager : MonoBehaviour {
     public bool isDead = false;
 
     //得分
-    public int Score = 0;
+    public static int Score = 0;
     public int SingleScore = 10;
 
     //关卡
@@ -68,6 +68,7 @@ public class GameManager : MonoBehaviour {
     //失败
    public void Lose()
     {
+        SceneManager.LoadScene(6);
         LoseText.SetActive(true);
         LoseButton.SetActive(true);
         RestartButton.SetActive(true);
@@ -89,6 +90,7 @@ public class GameManager : MonoBehaviour {
     //胜利
    public void Win()
     {
+        SceneManager.LoadScene(6);
         WinText.SetActive(true);
         if (CurrentLevel != MaxLevelNum)
             NextLevelButton.SetActive(true);

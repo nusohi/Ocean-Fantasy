@@ -38,15 +38,5 @@ public class RubbishMove : MonoBehaviour
         fish.SetEase(Ease.Linear);
 
     }
-    void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.gameObject.tag == "Rubbish")
-        {
-            Switch = -1;
-            Debug.Log("dsdas");
-            this.transform.DOMove(new Vector3(21.42f, -0.08f, -2), 4f);
-            Destroy(collision.gameObject);
-            Destroy(this.gameObject);
-        }
-    }
+    
 }

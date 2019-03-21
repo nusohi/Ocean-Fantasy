@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-
+    GameManager instance;
     public float Life = 100;
 
     public float Oxygen = -1;
@@ -18,7 +18,19 @@ public class Player : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
 	{
-	    Life += Oxygen;
+        float countdown = 10;
+        if (Life <= 0)
+            instance.isDead = true;
+        else
+        {
+            if (countdown <= 0)
+            {
+                countdown = 10;
+                Life += Oxygen;
+            }
+            else
+                countdown -= Time.deltaTime;
+        }
 	}
 
 
