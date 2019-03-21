@@ -10,6 +10,8 @@ public class CreateFish : MonoBehaviour
     private float high = 0.13f;
     private float low = -5.98f;
     public float CountDown = 3;
+
+    public int Num = 2;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,11 +21,15 @@ public class CreateFish : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        CountDown -= Time.deltaTime;
-        if (CountDown <= 0)
+        if (Num >= 0)
         {
-            Create();
-            CountDown = 5;
+            CountDown -= Time.deltaTime;
+            if (CountDown <= 0)
+            {
+                Create();
+                Num--;
+                CountDown = 5;
+            }
         }
     }
 
@@ -47,6 +53,11 @@ public class CreateFish : MonoBehaviour
         }
 
 
+    }
+    public void InitializeFish(int num)
+    {
+        Num = num;
+       
     }
 
 }
