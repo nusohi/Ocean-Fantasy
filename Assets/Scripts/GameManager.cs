@@ -35,7 +35,7 @@ public class GameManager : MonoBehaviour {
 	        _Instance = this;
         //获取当前场景编号
         CurrentLevel = SceneManager.GetActiveScene().buildIndex;
-        Time.timeScale = 0;
+       // Time.timeScale = 0;
 	}
 	
 	// Update is called once per frame
@@ -68,7 +68,7 @@ public class GameManager : MonoBehaviour {
     //失败
    public void Lose()
     {
-        SceneManager.LoadScene(6);
+        Debug.Log("ggggggggggggggg");
         LoseText.SetActive(true);
         LoseButton.SetActive(true);
         RestartButton.SetActive(true);
@@ -90,7 +90,6 @@ public class GameManager : MonoBehaviour {
     //胜利
    public void Win()
     {
-        SceneManager.LoadScene(6);
         WinText.SetActive(true);
         if (CurrentLevel != MaxLevelNum)
             NextLevelButton.SetActive(true);

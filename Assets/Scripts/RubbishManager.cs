@@ -63,10 +63,10 @@ public class RubbishManager : MonoBehaviour
 
     }
 
-    public void Initialize(int num, int speed )
-    {
-        Num = num;
-        Speed = speed;
-    }
+    //public void Initialize(int num, int speed )
+    //{
+    //    Num = num;
+    //    Speed = speed;
+    //}
 }
 
