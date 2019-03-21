@@ -36,9 +36,21 @@ public class FishMove : MonoBehaviour
     void Move()
     {
          indexX = Random.Range(-5,4);
+        indexY = Random.Range(0.4f, -5.8f);
+         Vector3 Scale = transform.localScale;
 
+         
+        if (this.transform.position.x < indexX)
+        {
+           Scale.x= Mathf.Abs(Scale.x);
 
-         indexY = Random.Range(0.4f, -5.8f);
+        }
+        else
+        {
+            Scale.x = -Mathf.Abs(Scale.x);
+
+        }
+        transform.localScale=Scale;
         Tweener fish= this.transform.DOMove(new Vector3(indexX, indexY, -2), 4f);
         fish.SetEase(Ease.Linear);
         fish.OnComplete(Eat);
@@ -52,6 +64,7 @@ public class FishMove : MonoBehaviour
             Switch = -1;
             Debug.Log("dsdas");
             Tweener fish = this.transform.DOMove(new Vector3(21.42f, -0.08f, -2), 10f);
+
             fish.OnComplete(Destroy);
             Destroy(collision.gameObject);
            

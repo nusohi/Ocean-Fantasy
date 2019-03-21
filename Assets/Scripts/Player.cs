@@ -38,8 +38,8 @@ public class Player : MonoBehaviour
     void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Rubbish")
-        {  Debug.Log("sdasda");
-           // GameManager.Instance.AddScore();
+        { 
+           GameManager.Instance.AddScore();
             Destroy(collision.gameObject);
         }
         else
