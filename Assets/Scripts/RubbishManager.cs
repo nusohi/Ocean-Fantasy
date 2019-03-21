@@ -50,8 +50,6 @@ public class RubbishManager : MonoBehaviour
         if (indexX >= 0)
         {
             GameObject go = GameObject.Instantiate(RubbishArray[index], new Vector3(Right, indexY, -2), Quaternion.identity) as GameObject;
-       
-       
         }
         else
         {

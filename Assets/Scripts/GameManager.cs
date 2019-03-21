@@ -20,7 +20,7 @@ public class GameManager : MonoBehaviour {
     public int SingleScore = 10;
 
     //关卡
-    public int MaxLevelNum = 5;//最大关卡数
+    public int MaxLevelNum = 4;//最大关卡数
     public int CurrentLevel = 0;//当前关卡号
 
     //文本
@@ -77,6 +77,8 @@ public class GameManager : MonoBehaviour {
     //重新开始
    public void GameRestart()
     {
+        Debug.Log("nmsl");
+
         SceneManager.LoadScene(CurrentLevel);
         isDead = false;
     }

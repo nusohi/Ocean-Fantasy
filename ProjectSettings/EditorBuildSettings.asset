@@ -11,19 +11,28 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Level1.unity
     guid: 4a8859f4a61e64349b36c58cab8dfc52
+  - enabled: 0
+    path: Assets/__DELETED_GUID_Trash/6ead36e2f5da59849a40659f0956d4e9
+    guid: 6ead36e2f5da59849a40659f0956d4e9
+  - enabled: 0
+    path: Assets/__DELETED_GUID_Trash/6a6b43d73c180d344b0a3d290d256e6a
+    guid: 6a6b43d73c180d344b0a3d290d256e6a
+  - enabled: 0
+    path: Assets/__DELETED_GUID_Trash/ab6c24473e60f7e4997cddeef0b5c272
+    guid: ab6c24473e60f7e4997cddeef0b5c272
+  - enabled: 0
+    path: Assets/Scenes/jiemian.unity
+    guid: 5ba76b9309b151248b7225d9363433d5
   - enabled: 1
     path: Assets/Scenes/Level2.unity
-    guid: 6ead36e2f5da59849a40659f0956d4e9
+    guid: 98dfa2697bbf2064d9d2c5dbcea224c7
   - enabled: 1
     path: Assets/Scenes/Level3.unity
-    guid: 6a6b43d73c180d344b0a3d290d256e6a
+    guid: 6ef105b22e151864bafeab3add59f744
   - enabled: 1
     path: Assets/Scenes/Level4.unity
-    guid: ab6c24473e60f7e4997cddeef0b5c272
+    guid: 3968fed1277032c429eb1e2de4642c4b
   - enabled: 1
     path: Assets/Scenes/Main.unity
     guid: 2cda990e2423bbf4892e6590ba056729
-  - enabled: 1
-    path: Assets/Scenes/jiemian.unity
-    guid: 5ba76b9309b151248b7225d9363433d5
   m_configObjects: {}
