@@ -50,16 +50,14 @@ public class RubbishManager : MonoBehaviour
         if (indexX >= 0)
         {
             GameObject go = GameObject.Instantiate(RubbishArray[index], new Vector3(Right, indexY, -2), Quaternion.identity) as GameObject;
-          Rigidbody2D rigidbody = go.GetComponent<Rigidbody2D>();
-        rigidbody.velocity=new Vector3(-5,0,0);
-        Destroy(go.gameObject,8f);
+       
+       
         }
         else
         {
             GameObject go = GameObject.Instantiate(RubbishArray[index], new Vector3(Left, indexY, -2), Quaternion.identity) as GameObject;
-            Rigidbody2D rigidbody = go.GetComponent<Rigidbody2D>();
-            rigidbody.velocity = new Vector3(5, 0, 0);
-            Destroy(go.gameObject, 8f);
+         
+            
         }
          
 
