@@ -62,10 +62,10 @@ public class FishMove : MonoBehaviour
         {
             CanEat = 0;
             Switch = -1;
-            Debug.Log("dsdas");
-            Tweener fish = this.transform.DOMove(new Vector3(21.42f, -0.08f, -2), 10f);
+           
+            Tweener fish = this.transform.DOMove(new Vector3(transform.position.x, 2.48f, -2), 10f);
 
-            fish.OnComplete(Destroy);
+          transform.rotation=new Quaternion(0,0,180f,0);
             Destroy(collision.gameObject);
            
         }

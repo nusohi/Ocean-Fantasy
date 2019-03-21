@@ -9,9 +9,11 @@ public class Player : MonoBehaviour
     private float countdown = 10;
     public float Life = 100;
 
-    public float Oxygen = -1;
+    public float DeOxygen = -5;
 
     public float AddOxygen = 5;
+
+   
 	// Use this for initialization
 	void Start () {
 		
@@ -25,7 +27,7 @@ public class Player : MonoBehaviour
         else {
             if (countdown <= 0) {
                 countdown = 10;
-                Life += Oxygen;
+                Life += DeOxygen;
             }
             else
                 countdown -= Time.deltaTime;
@@ -40,17 +42,28 @@ public class Player : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Rubbish")
-        { 
-           GameManager.Instance.AddScore();
-            Destroy(collision.gameObject);
-        }
-        else
-        {
-            if (collision.gameObject.tag == "Oxygen")
+       
+            if (collision.gameObject.tag == "Rubbish")
             {
-                Oxygen = AddOxygen;
+            GameManager.Instance.AddScore();
+                Destroy(collision.gameObject);
+        }
+            else
+            {
+                if (collision.gameObject.tag == "Sea")
+                {
+                    DeOxygen = -5;
+                }
             }
+        
+    }
+
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Oxygen")
+        {
+            DeOxygen = AddOxygen;
+           
         }
     }
 }
