@@ -15,12 +15,13 @@ public class CreateFish : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+       
     }
 
     // Update is called once per frame
     void Update()
     {
+
         if (Num >= 0)
         {
             CountDown -= Time.deltaTime;
