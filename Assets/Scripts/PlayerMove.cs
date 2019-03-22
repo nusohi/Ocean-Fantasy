@@ -9,7 +9,7 @@ public class PlayerMove : MonoBehaviour {
     public float DashStep = 0.10f;      // 每关键帧 加速时可移动步长
 
     public float ReduceSpeed = 0.25f;      // 加速时蓄力值减少速度
-    public float RecoverSpeed = 0.4f;     // 蓄力值恢复的速度
+    public float RecoverSpeed = 0.10f;     // 蓄力值恢复的速度
 
     public Slider PowerSlider;
 
