@@ -8,15 +8,16 @@ public class Player : MonoBehaviour
     public Slider OxygenSlider;
     private float countdown = 10;
     public float Life = 100;
-
+    private AudioSource audio;
     public float DeOxygen = -5;
 
     public float AddOxygen = 5;
 
    
 	// Use this for initialization
-	void Start () {
-		
+	void Start ()
+	{
+	    audio = this.GetComponent<AudioSource>();
 	}
 
     // Update is called once per frame
@@ -45,6 +46,7 @@ public class Player : MonoBehaviour
        
             if (collision.gameObject.tag == "Rubbish")
             {
+                audio.Play();
             GameManager.Instance.AddScore();
                 Destroy(collision.gameObject);
         }

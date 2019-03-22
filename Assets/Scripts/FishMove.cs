@@ -9,8 +9,8 @@ public class FishMove : MonoBehaviour
     public float CountDown = 4;
     public float indexY = 0;
     private int Switch = 1;
-
-    private int CanEat = 0;
+    public bool IsDead = false;
+    public int CanEat = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -35,6 +35,7 @@ public class FishMove : MonoBehaviour
 
     void Move()
     {
+        
          indexX = Random.Range(-5,4);
         indexY = Random.Range(0.4f, -5.8f);
          Vector3 Scale = transform.localScale;
@@ -53,28 +54,29 @@ public class FishMove : MonoBehaviour
         transform.localScale=Scale;
         Tweener fish= this.transform.DOMove(new Vector3(indexX, indexY, -2), 4f);
         fish.SetEase(Ease.Linear);
-        fish.OnComplete(Eat);
+        if(IsDead==false)
+        { fish.OnComplete(Eat);}
 
     }
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Rubbish"&&CanEat>0)
+        if (collision.gameObject.tag == "Rubbish"&&CanEat > 0)
         {
-            CanEat = 0;
-            Switch = -1;
-           
-            Tweener fish = this.transform.DOMove(new Vector3(transform.position.x, 2.48f, -2), 10f);
 
-          transform.rotation=new Quaternion(0,0,180f,0);
-            Destroy(collision.gameObject);
-           
+            IsDead = true;
+                CanEat = 0;
+                Switch = -1;
+
+                Tweener fish = this.transform.DOMove(new Vector3(transform.position.x, 2.48f, -2), 10f);
+
+                transform.rotation = new Quaternion(0, 0, 180f, 0);
+                Destroy(collision.gameObject);
+            
+
         }
     }
 
-    void Destroy()
-    {
-        Destroy(this.gameObject);
-    }
+   
 
     void Eat()
     {
