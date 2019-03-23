@@ -52,7 +52,7 @@ public class FishMove : MonoBehaviour
 
         }
         transform.localScale=Scale;
-        Tweener fish= this.transform.DOMove(new Vector3(indexX, indexY, -2), 4f);
+        Tweener fish= this.transform.DOMove(new Vector3(indexX, indexY, -2), 8f);
         fish.SetEase(Ease.Linear);
         if(IsDead==false)
         { fish.OnComplete(Eat);}
@@ -62,7 +62,7 @@ public class FishMove : MonoBehaviour
     {
         if (collision.gameObject.tag == "Rubbish"&&CanEat > 0)
         {
-
+            this.GetComponent<BoxCollider2D>().enabled = false;
             IsDead = true;
                 CanEat = 0;
                 Switch = -1;

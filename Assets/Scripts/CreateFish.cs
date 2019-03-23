@@ -36,22 +36,15 @@ public class CreateFish : MonoBehaviour
 
     public void Create()
     {
-        int indexX = Random.Range(-1, 1);
+        int indexX = Random.Range(-6, 6);
 
-        float indexY = Random.Range(low, high);
+        
         int index = Random.Range(0,FishArray.Length);
-        if (indexX >= 0)
-        {
-            GameObject go = GameObject.Instantiate(FishArray[index], new Vector3(Right, indexY, -2), Quaternion.identity) as GameObject;
+       
+            GameObject go = GameObject.Instantiate(FishArray[index], new Vector3(indexX, -8.5F, -2), Quaternion.identity) as GameObject;
            
            
-        }
-        else
-        {
-            GameObject go = GameObject.Instantiate(FishArray[index], new Vector3(Left, indexY, -2), Quaternion.identity) as GameObject;
-           
-           
-        }
+      
 
 
     }

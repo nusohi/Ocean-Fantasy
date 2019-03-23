@@ -6,8 +6,8 @@ using UnityEngine;
 public class RubbishManager : MonoBehaviour
 {
    
-    private float Left = -28;
-    private float Right = 28;
+    private float Left = -17;
+    private float Right =17 ;
     private float high = 0.13f;
     private float low = -5.98f;
     public GameObject[] RubbishArray;
