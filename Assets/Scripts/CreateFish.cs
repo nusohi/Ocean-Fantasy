@@ -9,7 +9,7 @@ public class CreateFish : MonoBehaviour
     private float Right = 28;
     private float high = 0.13f;
     private float low = -5.98f;
-    public float CountDown = 3;
+    public float CountDown = 0;
 
     public int Num = 1;
     // Start is called before the first frame update
@@ -29,7 +29,7 @@ public class CreateFish : MonoBehaviour
             {
                 Create();
                 Num--;
-                CountDown = 5;
+                CountDown = 3;
             }
         }
     }

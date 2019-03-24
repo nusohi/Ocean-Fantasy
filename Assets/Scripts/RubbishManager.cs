@@ -14,7 +14,7 @@ public class RubbishManager : MonoBehaviour
     private List<Vector2> positionList = new List<Vector2>();
     private Transform RubbishHolder;
 
-    public float CountDown = 3;
+    public float CountDown = 0;
    public float Num = 4;
 
     private float Speed = 3;
@@ -64,7 +64,7 @@ public class RubbishManager : MonoBehaviour
     public void Initialize(int num)
     {
         Num = num;
-       Debug.Log("777");
+      
     }
 }
 

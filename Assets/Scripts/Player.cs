@@ -11,7 +11,7 @@ public class Player : MonoBehaviour
     public float Life = 100;
     private AudioSource audio;
     public float DeOxygen = -5;
-    public int test = 1;
+    public int test = 2;
     public float AddOxygen = 5;
 
    
@@ -24,6 +24,10 @@ public class Player : MonoBehaviour
 
     // Update is called once per frame
     void Update() {
+        if (Life <= 20)
+        {
+            GameObject.Find("Main Camera").SendMessage("doshake");
+        }
         if (Life > 100)
         {
             Life = 100;
@@ -59,7 +63,7 @@ public class Player : MonoBehaviour
             {
                 if (collision.gameObject.tag == "Sea")
                 {
-                    DeOxygen = -5;
+                    DeOxygen = -3;
                 }
             }
         

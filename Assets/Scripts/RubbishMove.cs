@@ -5,7 +5,7 @@ using DG.Tweening;
 public class RubbishMove : MonoBehaviour
 {
     public int indexX = 0;
-    public float CountDown = 4;
+    public float CountDown = 0;
     public float indexY = 0;
 
     

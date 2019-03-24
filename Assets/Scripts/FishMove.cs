@@ -6,7 +6,7 @@ using UnityEngine;
 public class FishMove : MonoBehaviour
 {
     public int indexX = 0;
-    public float CountDown = 4;
+    public float CountDown = 0;
     public float indexY = 0;
     private int Switch = 1;
     public bool IsDead = false;
@@ -68,7 +68,7 @@ public class FishMove : MonoBehaviour
                 CanEat = 0;
                 Switch = -1;
 
-                Tweener fish = this.transform.DOMove(new Vector3(transform.position.x, 2.48f, -2), 10f);
+                Tweener fish = this.transform.DOMove(new Vector3(transform.position.x, 2.48f, -2), 8f);
 
                 transform.rotation = new Quaternion(0, 0, 180f, 0);
                 Destroy(collision.gameObject);

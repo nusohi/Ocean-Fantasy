@@ -120,5 +120,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   indexX: 0
-  CountDown: 4
+  CountDown: 0
   indexY: 0
+  IsDead: 0
+  CanEat: 0
