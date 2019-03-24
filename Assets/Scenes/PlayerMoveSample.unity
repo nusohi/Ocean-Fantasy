@@ -560,10 +560,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0a3211448b09a44e92d627f41552d77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NormalStep: 0.05
+  NormalStep: 0.02
   DashStep: 0.1
   ReduceSpeed: 0.25
-  RecoverSpeed: 0.4
+  RecoverSpeed: 0.1
   PowerSlider: {fileID: 167005361}
 --- !u!114 &460283284
 MonoBehaviour:
@@ -580,6 +580,7 @@ MonoBehaviour:
   OxygenSlider: {fileID: 298817265}
   Life: 100
   DeOxygen: -5
+  test: 2
   AddOxygen: 5
 --- !u!50 &460283285
 Rigidbody2D:

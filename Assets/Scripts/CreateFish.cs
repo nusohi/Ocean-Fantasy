@@ -11,7 +11,7 @@ public class CreateFish : MonoBehaviour
     private float low = -5.98f;
     public float CountDown = 3;
 
-    public int Num = 2;
+    public int Num = 1;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,7 +22,7 @@ public class CreateFish : MonoBehaviour
     void Update()
     {
 
-        if (Num >= 0)
+        if (Num >0)
         {
             CountDown -= Time.deltaTime;
             if (CountDown <= 0)
@@ -36,29 +36,22 @@ public class CreateFish : MonoBehaviour
 
     public void Create()
     {
-        int indexX = Random.Range(-1, 1);
+        int indexX = Random.Range(-6, 6);
 
-        float indexY = Random.Range(low, high);
+        
         int index = Random.Range(0,FishArray.Length);
-        if (indexX >= 0)
-        {
-            GameObject go = GameObject.Instantiate(FishArray[index], new Vector3(Right, indexY, -2), Quaternion.identity) as GameObject;
+       
+            GameObject go = GameObject.Instantiate(FishArray[index], new Vector3(indexX, -8.5F, -2), Quaternion.identity) as GameObject;
            
            
-        }
-        else
-        {
-            GameObject go = GameObject.Instantiate(FishArray[index], new Vector3(Left, indexY, -2), Quaternion.identity) as GameObject;
-           
-           
-        }
+      
 
 
     }
     public void InitializeFish(int num)
     {
         Num = num;
-       
+       Debug.Log("666");
     }
 
 }

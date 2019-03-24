@@ -6,8 +6,8 @@ using UnityEngine;
 public class RubbishManager : MonoBehaviour
 {
    
-    private float Left = -28;
-    private float Right = 28;
+    private float Left = -17;
+    private float Right =17 ;
     private float high = 0.13f;
     private float low = -5.98f;
     public GameObject[] RubbishArray;
@@ -15,7 +15,7 @@ public class RubbishManager : MonoBehaviour
     private Transform RubbishHolder;
 
     public float CountDown = 3;
-    private float Num = 10;
+   public float Num = 4;
 
     private float Speed = 3;
     // Use this for initialization
@@ -27,7 +27,7 @@ public class RubbishManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Num>=0)
+        if(Num>0)
         {
             CountDown -= Time.deltaTime;
             if (CountDown <=0)
@@ -61,10 +61,10 @@ public class RubbishManager : MonoBehaviour
 
     }
 
-    //public void Initialize(int num, int speed )
-    //{
-    //    Num = num;
-    //    Speed = speed;
-    //}
+    public void Initialize(int num)
+    {
+        Num = num;
+       Debug.Log("777");
+    }
 }
 

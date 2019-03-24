@@ -33,7 +33,7 @@ public class RubbishMove : MonoBehaviour
 
 
         indexY = Random.Range(0.4f, -5.8f);
-        Tweener fish = this.transform.DOMove(new Vector3(indexX, indexY, -2), 4f);
+        Tweener fish = this.transform.DOMove(new Vector3(indexX, indexY, -2), 8f);
         fish.SetEase(Ease.Linear);
 
     }

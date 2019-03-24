@@ -1,7 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 using UnityEngine.SceneManagement;
 using UnityEngine;
+using UnityEngine.UI;
+using Debug = UnityEngine.Debug;
 
 public class GameManager : MonoBehaviour {
 
@@ -11,7 +14,10 @@ public class GameManager : MonoBehaviour {
     //垃圾数
     public int TargetRubbishNum = 10;//目标垃圾数
     public int GotRubbishNum = 0;//已收垃圾数
-
+    public int FishBody = 0;
+    public Text scoreText;
+    public int fishnum = 1;
+    public int rubbishnum = 1;//生成垃圾数
     //角色是否死亡
     public bool isDead = false;
 
@@ -24,7 +30,7 @@ public class GameManager : MonoBehaviour {
     public int CurrentLevel = 0;//当前关卡号
 
     //文本
-    public GameObject LoseText, WinText, RestartText;
+    public GameObject LoseText, WinText, RestartText,FishDieText;
     //按钮
     public GameObject LoseButton, RestartButton, NextLevelButton;
 
@@ -35,16 +41,24 @@ public class GameManager : MonoBehaviour {
 	        _Instance = this;
         //获取当前场景编号
         CurrentLevel = SceneManager.GetActiveScene().buildIndex;
-       // Time.timeScale = 0;
+       
+          DifficultyControl(CurrentLevel);
 	}
-	
+
+    void Start()
+    {
+
+    }
 	// Update is called once per frame
 	void Update () {
         //角色死亡则调用失败结局
-        if (isDead)
+        if (isDead||FishBody==rubbishnum-TargetRubbishNum)
             Lose();
         else if (GotRubbishNum == TargetRubbishNum)
             Win();//回收垃圾达到目标则胜利
+
+        // score text
+        scoreText.text= GotRubbishNum.ToString()+" / "+TargetRubbishNum.ToString();
 	}
 
     public void GameStart(GameObject t)
@@ -67,12 +81,27 @@ public class GameManager : MonoBehaviour {
     
     //失败
    public void Lose()
-    {
+   {
+      
         Debug.Log("ggggggggggggggg");
-        LoseText.SetActive(true);
+       if (FishBody != rubbishnum - TargetRubbishNum)
+       { FishDieText.SetActive(false);
+          LoseText.SetActive(true);
+           Time.timeScale = 0;
+           Debug.Log("s");
+           
+        }
+       else
+       {
+           FishDieText.SetActive(true);
+           
+           Debug.Log("sb");
+       }
         LoseButton.SetActive(true);
         RestartButton.SetActive(true);
-    }
+       
+
+   }
 
     //重新开始
    public void GameRestart()
@@ -81,6 +110,7 @@ public class GameManager : MonoBehaviour {
 
         SceneManager.LoadScene(CurrentLevel);
         isDead = false;
+        Time.timeScale = 1;
     }
 
     //退出
@@ -91,7 +121,8 @@ public class GameManager : MonoBehaviour {
 
     //胜利
    public void Win()
-    {
+   {
+       Time.timeScale = 0;
         WinText.SetActive(true);
         if (CurrentLevel != MaxLevelNum)
             NextLevelButton.SetActive(true);
@@ -101,10 +132,13 @@ public class GameManager : MonoBehaviour {
     //下一关
     public void NextLevel()
     {
-
+        Time.timeScale = 1;
         //若不是最后一关则跳转至下一关
         if (CurrentLevel != MaxLevelNum)
+        {
             SceneManager.LoadScene(++CurrentLevel);
+            DifficultyControl(CurrentLevel);
+        }
         //是最后一关则游戏结束
         else
         {
@@ -114,10 +148,40 @@ public class GameManager : MonoBehaviour {
     }
 
     //难度控制
-    void DifficultyControl(int num,int speed)
+    void DifficultyControl(int num)
     {
-        GameObject.Find("RubbishManager").SendMessage("Initialize");
-        //Initialize(num,speed)
+       
+       
+        switch (num)
+        {
+            case 1:
+                fishnum = 1;
+                rubbishnum = 4;
+                TargetRubbishNum = 3;
+                Debug.Log("111");
+                break;
+            case 2:
+                fishnum = 3;
+                rubbishnum = 6;
+                TargetRubbishNum = 5;
+                Debug.Log("222");
+                break;
+            case 3:
+                fishnum = 5;
+                rubbishnum = 8;
+                TargetRubbishNum = 6;
+                Debug.Log("333");
+                break;
+            case 4:
+                fishnum = 7;
+                rubbishnum = 10;
+                TargetRubbishNum = 7;
+                break;
+           
+   
+        }
+        GameObject.Find("RubbishMaker").SendMessage("Initialize",rubbishnum);
+        GameObject.Find("FishMake").SendMessage("InitializeFish", fishnum);
     }
 
 
