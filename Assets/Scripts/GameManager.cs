@@ -106,8 +106,13 @@ public class GameManager : MonoBehaviour {
        else
        {
            FishDieText.SetActive(true);
-           
-           Debug.Log("sb");
+           Time.timeScale = 0;
+           if (!isGameOver)
+           {
+               Time.timeScale = 1;
+               isGameOver = true;
+           }
+            Debug.Log("sb");
        }
         LoseButton.SetActive(true);
         RestartButton.SetActive(true);
