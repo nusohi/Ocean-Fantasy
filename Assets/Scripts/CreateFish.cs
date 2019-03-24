@@ -11,7 +11,7 @@ public class CreateFish : MonoBehaviour
     private float low = -5.98f;
     public float CountDown = 3;
 
-    public int Num = 2;
+    public int Num = 1;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,7 +22,7 @@ public class CreateFish : MonoBehaviour
     void Update()
     {
 
-        if (Num >= 0)
+        if (Num >0)
         {
             CountDown -= Time.deltaTime;
             if (CountDown <= 0)
@@ -51,7 +51,7 @@ public class CreateFish : MonoBehaviour
     public void InitializeFish(int num)
     {
         Num = num;
-       
+       Debug.Log("666");
     }
 
 }

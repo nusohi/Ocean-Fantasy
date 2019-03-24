@@ -15,7 +15,7 @@ public class RubbishManager : MonoBehaviour
     private Transform RubbishHolder;
 
     public float CountDown = 3;
-    private float Num = 10;
+   public float Num = 4;
 
     private float Speed = 3;
     // Use this for initialization
@@ -27,7 +27,7 @@ public class RubbishManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Num>=0)
+        if(Num>0)
         {
             CountDown -= Time.deltaTime;
             if (CountDown <=0)
@@ -61,10 +61,10 @@ public class RubbishManager : MonoBehaviour
 
     }
 
-    public void Initialize(int num, int speed)
+    public void Initialize(int num)
     {
         Num = num;
-        Speed = speed;
+       Debug.Log("777");
     }
 }
 

@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class PlayerMove : MonoBehaviour {
     
-    public float NormalStep = 0.05f;    // 每关键帧 正常可移动步长
+    public float NormalStep = 0.02f;    // 每关键帧 正常可移动步长
     public float DashStep = 0.10f;      // 每关键帧 加速时可移动步长
 
     public float ReduceSpeed = 0.25f;      // 加速时蓄力值减少速度

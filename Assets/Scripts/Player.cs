@@ -1,16 +1,17 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using DG.Tweening;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
     public Slider OxygenSlider;
-    private float countdown = 10;
+    private float countdown = 5;
     public float Life = 100;
     private AudioSource audio;
     public float DeOxygen = -5;
-
+    public int test = 1;
     public float AddOxygen = 5;
 
    
@@ -22,12 +23,15 @@ public class Player : MonoBehaviour
 
     // Update is called once per frame
     void Update() {
-
+        if (Life > 100)
+        {
+            Life = 100;
+        }
         if (Life <= 0)
             GameManager.Instance.isDead = true;
         else {
             if (countdown <= 0) {
-                countdown = 10;
+                countdown = test;
                 Life += DeOxygen;
             }
             else
@@ -68,4 +72,6 @@ public class Player : MonoBehaviour
            
         }
     }
+
+   
 }

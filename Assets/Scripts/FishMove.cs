@@ -64,6 +64,7 @@ public class FishMove : MonoBehaviour
         {
             this.GetComponent<BoxCollider2D>().enabled = false;
             IsDead = true;
+            GameManager.Instance.FishBody++;
                 CanEat = 0;
                 Switch = -1;
 
