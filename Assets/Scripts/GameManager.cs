@@ -11,6 +11,8 @@ public class GameManager : MonoBehaviour {
     private static GameManager _Instance;
     public static GameManager Instance { get { return _Instance; } }
 
+    public float test;//显示当前timescale
+
     //垃圾数
     public int TargetRubbishNum = 10;//目标垃圾数
     public int GotRubbishNum = 0;//已收垃圾数
@@ -18,8 +20,12 @@ public class GameManager : MonoBehaviour {
     public Text scoreText;
     public int fishnum = 1;
     public int rubbishnum = 1;//生成垃圾数
+    
     //角色是否死亡
     public bool isDead = false;
+
+    //游戏是否结束
+    public bool isGameOver = false;
 
     //得分
     public static int Score = 0;
@@ -51,6 +57,7 @@ public class GameManager : MonoBehaviour {
     }
 	// Update is called once per frame
 	void Update () {
+        test = Time.timeScale;
         //角色死亡则调用失败结局
         if (isDead||FishBody==rubbishnum-TargetRubbishNum)
             Lose();
@@ -82,14 +89,18 @@ public class GameManager : MonoBehaviour {
     //失败
    public void Lose()
    {
-      
         Debug.Log("ggggggggggggggg");
        if (FishBody != rubbishnum - TargetRubbishNum)
-       { FishDieText.SetActive(false);
-          LoseText.SetActive(true);
-           Time.timeScale = 0;
-           Debug.Log("s");
-           
+       {
+            FishDieText.SetActive(false);
+            LoseText.SetActive(true);
+            Time.timeScale = 0;
+            if (!isGameOver)
+            {
+                Time.timeScale = 1;
+                isGameOver = true;
+            }
+            Debug.Log("s");
         }
        else
        {
@@ -106,10 +117,10 @@ public class GameManager : MonoBehaviour {
     //重新开始
    public void GameRestart()
     {
-        Debug.Log("nmsl");
-
-        SceneManager.LoadScene(CurrentLevel);
+        isGameOver = false;
         isDead = false;
+        Debug.Log("nmsl");
+        SceneManager.LoadScene(CurrentLevel);
         Time.timeScale = 1;
     }
 
