@@ -19,6 +19,7 @@ public class Player : MonoBehaviour
 	void Start ()
 	{
 	    audio = this.GetComponent<AudioSource>();
+	    Life = 100;
 	}
 
     // Update is called once per frame

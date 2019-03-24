@@ -1509,6 +1509,11 @@ PrefabInstance:
       propertyPath: AddOxygen
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 114470840542201604, guid: 7c48af7a311332040b325a13facfd317,
+        type: 3}
+      propertyPath: Life
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 114379053220382040, guid: 7c48af7a311332040b325a13facfd317,
         type: 3}
       propertyPath: PowerSlider

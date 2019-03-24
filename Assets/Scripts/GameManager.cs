@@ -53,7 +53,8 @@ public class GameManager : MonoBehaviour {
 	void Update () {
         //角色死亡则调用失败结局
         if (isDead||FishBody==rubbishnum-TargetRubbishNum)
-            Lose();
+         Lose();
+     
         else if (GotRubbishNum == TargetRubbishNum)
             Win();//回收垃圾达到目标则胜利
 
@@ -123,6 +124,7 @@ public class GameManager : MonoBehaviour {
    public void Win()
    {
        Time.timeScale = 0;
+       Debug.Log("W");
         WinText.SetActive(true);
         if (CurrentLevel != MaxLevelNum)
             NextLevelButton.SetActive(true);
