@@ -12,6 +12,8 @@ public class PlayerMove : MonoBehaviour {
     public float RecoverSpeed = 0.10f;     // 蓄力值恢复的速度
 
     public Slider PowerSlider;
+    public JoyStick joyStick;
+    public SpaceButton spaceButton;
 
 
     private float _ReduceSpeed_PerFrame_;
@@ -33,8 +35,9 @@ public class PlayerMove : MonoBehaviour {
     }
 
     void Update() {
+        bool getSpaceKey = spaceButton.BtnPressed();
         // 加速
-        if (Input.GetKey(KeyCode.Space) && Power > 0f) {
+        if (getSpaceKey && Power > 0f) {
             Dashing = true;
             _Step_ = DashStep;
         }
@@ -49,7 +52,7 @@ public class PlayerMove : MonoBehaviour {
         }
 
         // 蓄力值恢复
-        if (!Dashing && Power < 1f && !Input.GetKey(KeyCode.Space)) {
+        if (!Dashing && Power < 1f && !getSpaceKey) {
             Power += _RecoverSpeed_PerFrame_;
         }
         else if (Power > 1f) {
@@ -65,8 +68,8 @@ public class PlayerMove : MonoBehaviour {
 
     void FixedUpdate() {
         // 基本移动 WASD
-        float h = Input.GetAxis("Horizontal");
-        float v = Input.GetAxis("Vertical");
+        float h = joyStick.Horizontal();
+        float v = joyStick.Vertical();
 
         if (Mathf.Abs(h) > 0.0001 || Mathf.Abs(v) > 0.0001) {
             rigidbody.transform.position += new Vector3(h * _Step_, v * _Step_, 0);
