@@ -124,6 +124,7 @@ MonoBehaviour:
   indexX: 0
   CountDown: 4
   indexY: 0
+  Speed: 4
 --- !u!50 &1809912154229235189
 Rigidbody2D:
   serializedVersion: 4
