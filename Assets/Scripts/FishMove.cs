@@ -64,8 +64,8 @@ public class FishMove : MonoBehaviour
 
             transform.rotation = new Quaternion(0, 0, 180f, 0);
 
-            collision.gameObject.transform.DOScale(0f, 0.5f);
-            Destroy(collision.gameObject,0.5f);
+            collision.gameObject.transform.DOScale(0f, 0.3f);
+            Destroy(collision.gameObject,0.3f);
 
 
         }

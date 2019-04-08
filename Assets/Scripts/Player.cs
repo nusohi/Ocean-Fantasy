@@ -51,8 +51,8 @@ public class Player : MonoBehaviour
         if (collision.gameObject.tag == "Rubbish") {
             audio.Play();
             GameManager.Instance.AddScore();
-            collision.gameObject.transform.DOScale(0f, 0.5f);
-            Destroy(collision.gameObject, 0.5f);
+            collision.gameObject.transform.DOScale(0f, 0.3f);
+            Destroy(collision.gameObject, 0.3f);
         }
         else {
             if (collision.gameObject.tag == "Sea") {
