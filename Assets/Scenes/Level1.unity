@@ -580,6 +580,11 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3588951385737820576, guid: fbc7e0db1e9795a4ea5b0b1cd1c7570e,
+        type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 17
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fbc7e0db1e9795a4ea5b0b1cd1c7570e, type: 3}
 --- !u!20 &270612447 stripped
@@ -2153,6 +2158,16 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5325619803164225943, guid: aae134a8dbe2e78468bbdc7dd8d717e6,
+        type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 17
+      objectReference: {fileID: 0}
+    - target: {fileID: 5325619803164225943, guid: aae134a8dbe2e78468bbdc7dd8d717e6,
+        type: 3}
+      propertyPath: m_FontData.m_MinSize
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aae134a8dbe2e78468bbdc7dd8d717e6, type: 3}
 --- !u!1 &1979182333
@@ -2392,6 +2407,11 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 218802914}
+    - target: {fileID: 4036067735453113796, guid: 6cd0a92788ce7b34fa500f11cc1c3d09,
+        type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 30
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6cd0a92788ce7b34fa500f11cc1c3d09, type: 3}
 --- !u!1001 &4714026108965633608
