@@ -771,6 +771,12 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!4 &334503193 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4368170439834874, guid: 7c48af7a311332040b325a13facfd317,
+    type: 3}
+  m_PrefabInstance: {fileID: 1451647491}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &344087903
 GameObject:
   m_ObjectHideFlags: 0
@@ -848,6 +854,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: JoyStick
+      objectReference: {fileID: 0}
+    - target: {fileID: 5278216014099248797, guid: 91ff3d0bcd62df84f9521640064f1f71,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5278216013109995943, guid: 91ff3d0bcd62df84f9521640064f1f71,
         type: 3}
@@ -997,11 +1008,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4225100703277400, guid: e18a18fb280688348adc122fc73faa96, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.32
+      value: -0.497
       objectReference: {fileID: 0}
     - target: {fileID: 4225100703277400, guid: e18a18fb280688348adc122fc73faa96, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.42
+      value: 1.94
       objectReference: {fileID: 0}
     - target: {fileID: 4225100703277400, guid: e18a18fb280688348adc122fc73faa96, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1039,6 +1050,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1540762638, guid: e18a18fb280688348adc122fc73faa96, type: 3}
+      propertyPath: follow
+      value: 
+      objectReference: {fileID: 334503193}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e18a18fb280688348adc122fc73faa96, type: 3}
 --- !u!1 &850979398
@@ -1185,6 +1200,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SpaceBtn
+      objectReference: {fileID: 0}
+    - target: {fileID: 4653462114376096337, guid: 5cc7d15826d6f934fa492676e9891d3c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4653462114376096336, guid: 5cc7d15826d6f934fa492676e9891d3c,
         type: 3}
@@ -2133,8 +2153,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1636659053}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.406, y: -0.9442706, z: -1}
-  m_LocalScale: {x: 1.5666896, y: 1, z: 1}
+  m_LocalPosition: {x: 0.98, y: -3.16, z: -1}
+  m_LocalScale: {x: 2.224787, y: 1.6114681, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 8
@@ -2583,6 +2603,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 30029304}
     m_Modifications:
+    - target: {fileID: 4036067736327911129, guid: 6cd0a92788ce7b34fa500f11cc1c3d09,
+        type: 3}
+      propertyPath: m_Name
+      value: Button
+      objectReference: {fileID: 0}
     - target: {fileID: 4036067736327911128, guid: 6cd0a92788ce7b34fa500f11cc1c3d09,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2687,11 +2712,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4036067736327911129, guid: 6cd0a92788ce7b34fa500f11cc1c3d09,
-        type: 3}
-      propertyPath: m_Name
-      value: Button
       objectReference: {fileID: 0}
     - target: {fileID: 4036067736327911131, guid: 6cd0a92788ce7b34fa500f11cc1c3d09,
         type: 3}

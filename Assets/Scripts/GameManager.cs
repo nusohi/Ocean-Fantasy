@@ -198,7 +198,7 @@ public class GameManager : MonoBehaviour {
            
    
         }
-        GameObject.Find("RubbishMaker").SendMessage("Initialize",rubbishnum);
+       // GameObject.Find("RubbishMaker").SendMessage("Initialize",rubbishnum);
         GameObject.Find("FishMake").SendMessage("InitializeFish", fishnum);
     }
 
