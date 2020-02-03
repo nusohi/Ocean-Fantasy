@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &9129064686707601487
+--- !u!1 &5726591052532214391
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,38 +8,38 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 8439274696192516212}
-  - component: {fileID: 371832081346383148}
-  - component: {fileID: 6033696019487672396}
-  - component: {fileID: 1818912163311090527}
+  - component: {fileID: 8303316067170949211}
+  - component: {fileID: 7635111426195545464}
+  - component: {fileID: 1374885759505897257}
+  - component: {fileID: 1534257210697735041}
   m_Layer: 0
-  m_Name: fISH 6
+  m_Name: Fish 5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &8439274696192516212
+--- !u!4 &8303316067170949211
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9129064686707601487}
-  m_LocalRotation: {x: 0, y: 0, z: -0.110688426, w: 0.9938552}
-  m_LocalPosition: {x: 2.4322426, y: -0.75, z: 0}
-  m_LocalScale: {x: 0.08, y: 0.08, z: 1}
+  m_GameObject: {fileID: 5726591052532214391}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.4322426, y: -3.4301453, z: 0}
+  m_LocalScale: {x: 0.05, y: 0.05, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -12.71}
---- !u!212 &371832081346383148
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &7635111426195545464
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9129064686707601487}
+  m_GameObject: {fileID: 5726591052532214391}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -50,7 +50,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a0e8ea8d553860141aa2ff9ba429b1a5, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -70,24 +70,24 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300020, guid: b6f4c1d86469c28499468991f1915b37, type: 3}
+  m_Sprite: {fileID: 21300012, guid: b6f4c1d86469c28499468991f1915b37, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 20.75, y: 10.450001}
+  m_Size: {x: 9.55, y: 8.2699995}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &6033696019487672396
+--- !u!61 &1374885759505897257
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9129064686707601487}
+  m_GameObject: {fileID: 5726591052532214391}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -98,22 +98,22 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 20.75, y: 10.450001}
-    newSize: {x: 20.75, y: 10.450001}
+    oldSize: {x: 9.55, y: 8.2699995}
+    newSize: {x: 9.55, y: 8.2699995}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 20.75, y: 10.450001}
+  m_Size: {x: 9.55, y: 8.2699995}
   m_EdgeRadius: 0
---- !u!114 &1818912163311090527
+--- !u!114 &1534257210697735041
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9129064686707601487}
+  m_GameObject: {fileID: 5726591052532214391}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d298b27a4e8640449aa3781fe701aa99, type: 3}
@@ -124,4 +124,4 @@ MonoBehaviour:
   indexY: 0
   IsDead: 0
   CanEat: 0
-  Speed: 6
+  Speed: 2
