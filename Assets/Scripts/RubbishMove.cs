@@ -7,6 +7,7 @@ public class RubbishMove : MonoBehaviour
     public int indexX = 0;
     public float CountDown = 0;
     public float indexY = 0;
+    public float Speed = 8f;
 
     
     // Start is called before the first frame update
@@ -33,7 +34,7 @@ public class RubbishMove : MonoBehaviour
 
 
         indexY = Random.Range(0.4f, -5.8f);
-        Tweener fish = this.transform.DOMove(new Vector3(indexX, indexY, -2), 8f);
+        Tweener fish = this.transform.DOMove(new Vector3(indexX, indexY, -2), Speed);
         fish.SetEase(Ease.Linear);
 
     }

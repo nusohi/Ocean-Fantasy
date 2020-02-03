@@ -250,7 +250,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -4.4, y: -173}
-  m_SizeDelta: {x: 119.09, y: 33.17}
+  m_SizeDelta: {x: 130, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &448474205
 MonoBehaviour:
@@ -377,7 +377,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 8, y: -43.117}
-  m_SizeDelta: {x: 695.8, y: 206.93}
+  m_SizeDelta: {x: 710, y: 206.93}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &747400663
 MonoBehaviour:
@@ -401,23 +401,18 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_FontSize: 18
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
     m_MaxSize: 119
-    m_Alignment: 0
+    m_Alignment: 1
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\n\u4F17\u6240\u5468\u77E5,\u6D77\u6D0B\u8986\u76D6\u4E86\u5730\u740371%\u7684\u9762\u79EF\uFF0C\u5979\u4FDD\u62A4\u4E86\u5730\u7403\u4E0A\u6240\u6709\u751F\u7269\u7684\u751F\u5B58\u4E5F\u5305\u62EC\u4EBA\u7C7B\u7684\u7E41\u884D\u3002\u6839\u636E\u8C03\u67E5\u6BCF\u5E74\u5168\u7403\u5411\u6D77\u6D0B\u503E\u5012\u7684\u5783\u573E\u7EA6700\u4E07\u5428\uFF0C\u6BCF\u5929\u5730\u7403\u4E0A\u90FD\u6709\u4E00\u79CD\u7269\u79CD\u9762\u4E34\u6D88\u5931...\n
-    \                                                     \u56E0\u6B64\uFF0C\u4FDD\u62A4\u6D77\u6D0B\uFF0C\u662F\u6211\u4EEC\u523B\u4E0D\u5BB9\u7F13\u7684\u8D23\u4EFB\uFF01\uFF01\uFF01\n
-    \                                                          \n                                  \u6E38\u620F\u73A9\u6CD5\uFF1A1\u3001\u4F7F\u7528\u4E0A\u4E0B\u5DE6\u53F3\u952E\u6216WASD\u952E\u64CD\u4F5C\u6F5C\u6C34\u5458\uFF1B\n
-    \                                                   2\u3001\u6309\u4F4F\u7A7A\u683C\u952E\u4F7F\u6F5C\u6C34\u5458\u52A0\u901F\u6E38\u52A8\uFF1B\n
-    \                                                   3\u3001\u6C27\u6C14\u4E0D\u591F\u65F6\uFF0C\u8BB0\u5F97\u56DE\u5230\u6D77\u9762\u547C\u5438\n
-    \                                 \u6E38\u620F\u76EE\u6807\uFF1A\u8BF7\u5728\u6D77\u6D0B\u751F\u7269\u63A5\u89E6\u5230\u6D77\u6D0B\u5783\u573E\u524D\u56DE\u6536\u6D77\u6D0B\u5783\u573E"
+  m_Text: "\n\u4F17\u6240\u5468\u77E5,\u6D77\u6D0B\u8986\u76D6\u4E86\u5730\u740371%\u7684\u9762\u79EF\uFF0C\u5979\u4FDD\u62A4\u4E86\u5730\u7403\u4E0A\u6240\u6709\u751F\u7269\u7684\u751F\u5B58\u4E5F\u5305\u62EC\u4EBA\u7C7B\u7684\u7E41\u884D\u3002\u6839\u636E\u8C03\u67E5\u6BCF\u5E74\u5168\u7403\u5411\u6D77\u6D0B\u503E\u5012\u7684\u5783\u573E\u7EA6700\u4E07\u5428\uFF0C\u6BCF\u5929\u5730\u7403\u4E0A\u90FD\u6709\u4E00\u79CD\u7269\u79CD\u9762\u4E34\u6D88\u5931...\n\u56E0\u6B64\uFF0C\u4FDD\u62A4\u6D77\u6D0B\uFF0C\u662F\u6211\u4EEC\u523B\u4E0D\u5BB9\u7F13\u7684\u8D23\u4EFB\uFF01\uFF01\uFF01\n\n\u6E38\u620F\u73A9\u6CD5\uFF1A1\u3001\u4F7F\u7528\u4E0A\u4E0B\u5DE6\u53F3\u952E\u6216WASD\u952E\u64CD\u4F5C\u6F5C\u6C34\u5458\uFF1B\n2\u3001\u6309\u4F4F\u7A7A\u683C\u952E\u4F7F\u6F5C\u6C34\u5458\u52A0\u901F\u6E38\u52A8\uFF1B\n3\u3001\u6C27\u6C14\u4E0D\u591F\u65F6\uFF0C\u8BB0\u5F97\u56DE\u5230\u6D77\u9762\u547C\u5438\n\u6E38\u620F\u76EE\u6807\uFF1A\u8BF7\u5728\u6D77\u6D0B\u751F\u7269\u63A5\u89E6\u5230\u6D77\u6D0B\u5783\u573E\u524D\u56DE\u6536\u6D77\u6D0B\u5783\u573E"
 --- !u!222 &747400664
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -530,10 +525,10 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_FontSize: 20
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 2
     m_MaxSize: 40
     m_Alignment: 4
     m_AlignByGeometry: 0

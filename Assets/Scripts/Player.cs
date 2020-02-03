@@ -14,22 +14,18 @@ public class Player : MonoBehaviour
     public int test = 2;
     public float AddOxygen = 5;
 
-   
-	// Use this for initialization
-	void Start ()
-	{
-	    audio = this.GetComponent<AudioSource>();
-	    Life = 100;
-	}
+    
+    void Start() {
+        audio = this.GetComponent<AudioSource>();
+        Life = 100;
+    }
+    
 
-    // Update is called once per frame
     void Update() {
-        if (Life <= 20)
-        {
+        if (Life <= 20) {
             GameObject.Find("Main Camera").SendMessage("doshake");
         }
-        if (Life > 100)
-        {
+        if (Life > 100) {
             Life = 100;
         }
         if (Life <= 0)
@@ -50,33 +46,28 @@ public class Player : MonoBehaviour
     }
 
 
-    void OnTriggerEnter2D(Collider2D collision)
-    {
-       
-            if (collision.gameObject.tag == "Rubbish")
-            {
-                audio.Play();
+    void OnTriggerEnter2D(Collider2D collision) {
+
+        if (collision.gameObject.tag == "Rubbish") {
+            audio.Play();
             GameManager.Instance.AddScore();
-                Destroy(collision.gameObject);
+            collision.gameObject.transform.DOScale(0f, 0.3f);
+            Destroy(collision.gameObject, 0.3f);
         }
-            else
-            {
-                if (collision.gameObject.tag == "Sea")
-                {
-                    DeOxygen = -3;
-                }
+        else {
+            if (collision.gameObject.tag == "Sea") {
+                DeOxygen = -3;
             }
-        
+        }
+
     }
 
-    void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.tag == "Oxygen")
-        {
+    void OnCollisionEnter2D(Collision2D collision) {
+        if (collision.gameObject.tag == "Oxygen") {
             DeOxygen = AddOxygen;
-           
+
         }
     }
 
-   
+
 }
