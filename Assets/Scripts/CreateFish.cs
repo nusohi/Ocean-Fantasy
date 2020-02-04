@@ -5,23 +5,12 @@ using UnityEngine;
 public class CreateFish : MonoBehaviour
 {
     public GameObject[] FishArray;
-    private float Left = -28;
-    private float Right = 28;
-    private float high = 0.13f;
-    private float low = -5.98f;
+    public float Left = -20;
+    public float Right = 10;
     public float CountDown = 0;
-
     public int Num = 1;
-    // Start is called before the first frame update
-    void Start()
-    {
-       
-    }
-
-    // Update is called once per frame
     void Update()
     {
-
         if (Num >0)
         {
             CountDown -= Time.deltaTime;
@@ -36,22 +25,13 @@ public class CreateFish : MonoBehaviour
 
     public void Create()
     {
-        int indexX = Random.Range(-6, 6);
-
-        
+        int indexX = (int)Random.Range(Left, Right);
         int index = Random.Range(0,FishArray.Length);
-       
-            GameObject go = GameObject.Instantiate(FishArray[index], new Vector3(indexX, -8.5F, -2), Quaternion.identity) as GameObject;
-           
-           
-      
-
-
+        GameObject go = GameObject.Instantiate(FishArray[index], new Vector3(indexX, -20, -2), Quaternion.identity) as GameObject;
     }
     public void InitializeFish(int num)
     {
         Num = num;
-       Debug.Log("666");
     }
 
 }

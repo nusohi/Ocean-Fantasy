@@ -6,25 +6,16 @@ using UnityEngine;
 public class RubbishManager : MonoBehaviour
 {
    
-    private float Left = -17;
-    private float Right =17 ;
-    private float high = 0.13f;
-    private float low = -5.98f;
+    public float Left = -17;
+    public float Right =17 ;
+    public float high = 0.13f;
+    public float low = -5.98f;
     public GameObject[] RubbishArray;
     private List<Vector2> positionList = new List<Vector2>();
     private Transform RubbishHolder;
-
     public float CountDown = 0;
-   public float Num = 4;
-
+    public float Num = 4;
     private float Speed = 3;
-    // Use this for initialization
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
     void Update()
     {
         if(Num>0)
@@ -44,7 +35,6 @@ public class RubbishManager : MonoBehaviour
     public void CreateRubbish()
     {
         int indexX = Random.Range(-1, 1);
-       
         float indexY = Random.Range(low, high);
         int index = Random.Range(0, RubbishArray.Length);
         if (indexX >= 0)
@@ -53,9 +43,7 @@ public class RubbishManager : MonoBehaviour
         }
         else
         {
-            GameObject go = GameObject.Instantiate(RubbishArray[index], new Vector3(Left, indexY, -2), Quaternion.identity) as GameObject;
-         
-            
+            GameObject go = GameObject.Instantiate(RubbishArray[index], new Vector3(Left, indexY, -2), Quaternion.identity) as GameObject; 
         }
          
 

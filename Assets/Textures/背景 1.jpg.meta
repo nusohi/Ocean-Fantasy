@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: ac8070ca20bd418439eab68671eadcc6
+guid: 5dfc9d8b77d093049a32036bc08442fe
 TextureImporter:
   fileIDToRecycleName:
     21300000: "\u80CC\u666F_0"
@@ -89,9 +89,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
+        y: 1052
         width: 1024
-        height: 1398
+        height: 346
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
