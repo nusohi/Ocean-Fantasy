@@ -125,7 +125,6 @@ public class GameManager : MonoBehaviour {
     {
         isGameOver = false;
         isDead = false;
-        Debug.Log("nmsl");
         SceneManager.LoadScene(CurrentLevel);
         Time.timeScale = 1;
     }
@@ -168,8 +167,6 @@ public class GameManager : MonoBehaviour {
     //难度控制
     void DifficultyControl(int num)
     {
-       
-       
         switch (num)
         {
             case 1:
@@ -198,8 +195,8 @@ public class GameManager : MonoBehaviour {
            
    
         }
-       // GameObject.Find("RubbishMaker").SendMessage("Initialize",rubbishnum);
-        GameObject.Find("FishMake").SendMessage("InitializeFish", fishnum);
+       GameObject.Find("RubbishMaker").SendMessage("Initialize",rubbishnum);
+       GameObject.Find("FishMake").SendMessage("InitializeFish", fishnum);
     }
 
 
