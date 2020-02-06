@@ -100,8 +100,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1302293169510452}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.04495, y: 0.04365, z: 1}
+  m_LocalPosition: {x: 0.3232, y: 0.1105, z: 0}
+  m_LocalScale: {x: 0.07847821, y: 0.06666228, z: 1}
   m_Children:
   - {fileID: 1094548966}
   m_Father: {fileID: 0}
@@ -144,7 +144,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300002, guid: 0c321e61b75fb1f4c83763b2669f6be5, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a10b999e6578624409bff55701f284aa, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -229,6 +229,8 @@ MonoBehaviour:
   ReduceSpeed: 0.25
   RecoverSpeed: 0.05
   PowerSlider: {fileID: 0}
+  joyStick: {fileID: 0}
+  spaceButton: {fileID: 0}
 --- !u!61 &447591949121423261
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -244,16 +246,16 @@ BoxCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
+    border: {x: 0, y: 0, z: 0.06, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 46.03, y: 28.659998}
+    oldSize: {x: 19.28, y: 9.6}
     newSize: {x: 46.03, y: 28.659998}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 46.03, y: 28.659998}
+  m_Size: {x: 19.58, y: 9.4}
   m_EdgeRadius: 0
 --- !u!82 &334503186
 AudioSource:
