@@ -19,6 +19,6 @@ public class shake : MonoBehaviour
 
     void doshake()
     {
-        transform.DOShakePosition(5, new Vector3(50f, 50f, 0));
+        transform.DOShakePosition(5, new Vector3(0.05f, 0.05f, 0));
     }
 }
