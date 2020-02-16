@@ -1907,7 +1907,7 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 1915
+        width: 3838
         height: 960
       alignment: 9
       pivot: {x: 60, y: 0.5}
@@ -1937,26 +1937,6 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 641394465b2c4c44395f40364063f7e9
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: "\u6F5C\u6C34_2"
-      rect:
-        serializedVersion: 2
-        x: 1915
-        y: 0
-        width: 1915
-        height: 960
-      alignment: 9
-      pivot: {x: 60, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 795ba0a0e99501c4e8c0d27c53e4620f
       vertices: []
       indices: 
       edges: []
