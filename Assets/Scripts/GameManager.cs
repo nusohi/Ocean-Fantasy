@@ -90,7 +90,6 @@ public class GameManager : MonoBehaviour {
     //失败
    public void Lose()
    {
-        Debug.Log("ggggggggggggggg");
        if (FishBody != rubbishnum - TargetRubbishNum)
        {
             FishDieText.SetActive(false);
@@ -173,32 +172,32 @@ public class GameManager : MonoBehaviour {
         switch (num)
         {
             case 1:
-                fishnum = 1;
-                rubbishnum = 4;
+                fishnum = 3;
+                rubbishnum = 5;
                 TargetRubbishNum = 3;
                 Debug.Log("111");
                 break;
             case 2:
-                fishnum = 3;
+                fishnum = 5;
                 rubbishnum = 6;
-                TargetRubbishNum = 5;
+                TargetRubbishNum = 4;
                 Debug.Log("222");
                 break;
             case 3:
-                fishnum = 5;
+                fishnum = 7;
                 rubbishnum = 8;
-                TargetRubbishNum = 6;
+                TargetRubbishNum = 5;
                 Debug.Log("333");
                 break;
             case 4:
-                fishnum = 7;
+                fishnum = 9;
                 rubbishnum = 10;
-                TargetRubbishNum = 7;
+                TargetRubbishNum = 6;
                 break;
            
    
         }
-       // GameObject.Find("RubbishMaker").SendMessage("Initialize",rubbishnum);
+        GameObject.Find("RubbishMaker").SendMessage("Initialize",rubbishnum);
         GameObject.Find("FishMake").SendMessage("InitializeFish", fishnum);
     }
 
