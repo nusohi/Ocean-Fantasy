@@ -124,4 +124,4 @@ MonoBehaviour:
   indexY: 0
   IsDead: 0
   CanEat: 0
-  Speed: 6
+  Speed: 8
